@@ -150,28 +150,42 @@
       <i class="fas fa-box-open" style="margin-right: 8px;"></i>
       Produk Kami
     </a>
-    <a 
-      href="https://wa.me/6281779008799" 
-      target="_blank"
-      style="
-        display: inline-block;
-        background: #25D366;
-        color: white;
-        text-decoration: none;
-        padding: 14px 32px;
-        border-radius: 50px;
-        font-weight: 600;
-        font-size: 1.1rem;
-        margin-top: 20px;
-        box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
-        transition: transform 0.2s, box-shadow 0.2s;
-      "
-      onmouseover="this.style.transform='scale(1.03)'; this.style.boxShadow='0 6px 15px rgba(37,211,102,0.4)';"
-      onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 10px rgba(37,211,102,0.3)';"
-    >
-      <i class="fab fa-whatsapp" style="margin-right: 8px;"></i>
-      Chat via WhatsApp
-    </a>
+    <button id="whatsapp-random" style="
+  background: #25D366;
+  color: white;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-top: 20px;
+  box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
+  cursor: pointer;
+  display: inline-block;
+">
+  <i class="fab fa-whatsapp" style="margin-right: 8px;"></i>
+  Chat via WhatsApp
+</button>
+
+<script>
+  document.getElementById('whatsapp-random').addEventListener('click', function() {
+    // Daftar nomor WhatsApp (format internasional, tanpa + dan tanpa 0)
+    const numbers = [
+      '6281779008799',   // Nomor utama
+      '6283193919005',   // Nomor cadangan 1
+      '62881024323212'    // Nomor cadangan 2
+    ];
+
+    // Pilih nomor acak
+    const randomNum = numbers[Math.floor(Math.random() * numbers.length)];
+
+    // Pesan otomatis (opsional)
+    const message = encodeURIComponent('Halo Kak, saya mau sewa gerobak.');
+
+    // Buka WhatsApp di tab baru
+    window.open(`https://wa.me/${randomNum}?text=${message}`, '_blank');
+  });
+</script>
 
     <p style="margin-top: 20px; font-size: 0.9rem; color: #888;">
       Klik tombol di atas untuk langsung mengirim pesan ke kami via WhatsApp.

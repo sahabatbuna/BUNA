@@ -109,6 +109,42 @@
           <p>Bakwan kawi</p>
           <p>Etalase Kompor Luar</p>
           <p>Etalase Kompor Dalam</p>
+          <button id="whatsapp-random" style="
+  background: #25D366;
+  color: white;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-top: 20px;
+  box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
+  cursor: pointer;
+  display: inline-block;
+">
+  <i class="fab fa-whatsapp" style="margin-right: 8px;"></i>
+  Pesan Sekarang
+</button>
+
+<script>
+  document.getElementById('whatsapp-random').addEventListener('click', function() {
+    // Daftar nomor WhatsApp (format internasional, tanpa + dan tanpa 0)
+    const numbers = [
+      '6281779008799',   // Nomor utama
+      '6283193919005',   // Nomor cadangan 1
+      '62881024323212'    // Nomor cadangan 2
+    ];
+
+    // Pilih nomor acak
+    const randomNum = numbers[Math.floor(Math.random() * numbers.length)];
+
+    // Pesan otomatis (opsional)
+    const message = encodeURIComponent('Halo Kak, saya mau sewa Gerobak.');
+
+    // Buka WhatsApp di tab baru
+    window.open(`https://wa.me/${randomNum}?text=${message}`, '_blank');
+  });
+</script>
         </div>
         <div class="product-card">
           <img src="img/booth.jpg" alt="Booth BUNA">
@@ -116,6 +152,42 @@
           <p>Booth Besar</p>
           <p>Booth Etalase Roda Kecil</p>
           <p>Booth Kecil Roda Besar</p>
+          <button id="whatsapp-random" style="
+  background: #25D366;
+  color: white;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-top: 20px;
+  box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
+  cursor: pointer;
+  display: inline-block;
+">
+  <i class="fab fa-whatsapp" style="margin-right: 8px;"></i>
+  Pesan Sekarang
+</button>
+
+<script>
+  document.getElementById('whatsapp-random').addEventListener('click', function() {
+    // Daftar nomor WhatsApp (format internasional, tanpa + dan tanpa 0)
+    const numbers = [
+      '6281779008799',   // Nomor utama
+      '6283193919005',   // Nomor cadangan 1
+      '62881024323212'    // Nomor cadangan 2
+    ];
+
+    // Pilih nomor acak
+    const randomNum = numbers[Math.floor(Math.random() * numbers.length)];
+
+    // Pesan otomatis (opsional)
+    const message = encodeURIComponent('Halo Kak, saya mau sewa Booth.');
+
+    // Buka WhatsApp di tab baru
+    window.open(`https://wa.me/${randomNum}?text=${message}`, '_blank');
+  });
+</script>
         </div>
         </div>
           </section>
